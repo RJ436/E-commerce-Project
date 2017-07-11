@@ -27,7 +27,7 @@ public class ProductTestCase
 		Product product=new Product();
 		
 		product.setProdname("WIFIMobile");
-		product.setProddesc("This Mobile is WIFI Enabled. You can Enjoy Internet");
+		product.setProdDesc("This Mobile is WIFI Enabled. You can Enjoy Internet");
 		product.setPrice(13000);
 		product.setQuantity(10);
 		product.setSuppid(9);
