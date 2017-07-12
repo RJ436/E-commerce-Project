@@ -15,9 +15,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.mobitel.MoBitelBackend.dao.CategoryDAO;
 import com.mobitel.MoBitelBackend.dao.ProductDAO;
 import com.mobitel.MoBitelBackend.dao.SupplierDAO;
+import com.mobitel.MoBitelBackend.dao.CartDAO;
+import com.mobitel.MoBitelBackend.dao.UserDAO;
 import com.mobitel.MoBitelBackend.model.Category;
 import com.mobitel.MoBitelBackend.model.Product;
 import com.mobitel.MoBitelBackend.model.Supplier;
+import com.mobitel.MoBitelBackend.model.Cart;
+import com.mobitel.MoBitelBackend.model.User;
 
 @Configuration
 @ComponentScan("com.mobitel.MobitelBackend")
@@ -57,6 +61,8 @@ public class DBConfig
 		sessionBuilder.addAnnotatedClass(Category.class);
 		sessionBuilder.addAnnotatedClass(Product.class);
 		sessionBuilder.addAnnotatedClass(Supplier.class);
+		sessionBuilder.addAnnotatedClass(Cart.class);
+		sessionBuilder.addAnnotatedClass(User.class);
 		System.out.println("Session Factory Object Creation");
 		
 		SessionFactory sessionFactory=sessionBuilder.buildSessionFactory();
@@ -95,5 +101,21 @@ public class DBConfig
     {
 		System.out.println("-- SupplierDAO Object Creation--");
 		return new SupplierDAO(sessionFactory);
+	}
+	
+	@Autowired
+	@Bean(name="cartDAO")
+	public CartDAO getCartDAO(SessionFactory sessionFactory)
+    {
+		System.out.println("-- CartDAO Object Creation--");
+		return new CartDAO(sessionFactory);
+	}
+	
+	@Autowired
+	@Bean(name="userDAO")
+	public UserDAO getUserDAO(SessionFactory sessionFactory)
+    {
+		System.out.println("-- UserDAO Object Creation--");
+		return new UserDAO(sessionFactory);
 	}
 }

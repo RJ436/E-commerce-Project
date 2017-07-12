@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.mobitel.MoBitelBackend.model.*;
 
-@Repository("userDAO")
+//@Repository("userDAO")
 
 public class UserDAO 
 {

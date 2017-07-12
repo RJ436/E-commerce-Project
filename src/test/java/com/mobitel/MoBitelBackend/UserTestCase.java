@@ -13,7 +13,7 @@ public class UserTestCase
 	{
 		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
 		
-		context.scan("com.mobitel.MobitelBackend");
+		context.scan("com.mobitel.MoBitelBackend");
 		
 		context.refresh();
 		
@@ -24,13 +24,13 @@ public class UserTestCase
 		
 		User user=new User();
 		
-		user.setUsername("knefn");
-		user.setPassword("fknf");
-		user.setCustname("mfoefm");
-		user.setRole("Guest");
-		user.setEmail("ef f f@gmail.com");
+		user.setUsername("Rahul");
+		user.setPassword("rahul");
+		user.setCustname("rahul");
+		user.setRole("Admin");
+		user.setEmail("rjagtap95@gmail.com");
 		user.setEnabled(true);
-		user.setCustaddress("dcdjcnkjdc");
+		user.setCustaddress("mumbai");
 
 		userDAO.insertUpdateUser(user);		
 		System.out.println("Username Inserted");
