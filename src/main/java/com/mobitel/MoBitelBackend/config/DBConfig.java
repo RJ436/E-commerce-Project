@@ -24,7 +24,7 @@ import com.mobitel.MoBitelBackend.model.Cart;
 import com.mobitel.MoBitelBackend.model.User;
 
 @Configuration
-@ComponentScan("com.mobitel.MobitelBackend")
+@ComponentScan("com.mobitel.MoBitelBackend")
 @EnableTransactionManagement
 
 public class DBConfig 
