@@ -26,7 +26,7 @@ public class SupplierTestCase
 		Supplier supplier=new Supplier();
 		
 		supplier.setSuppname("WIFIMobile");
-		supplier.setSuppdesc("This Mobile is WIFI Enabled. You can Enjoy Internet");
+		supplier.setSuppaddr("This Mobile is WIFI Enabled. You can Enjoy Internet");
 
 		supplierDAO.insertUpdateSupplier(supplier);		
 		System.out.println("Supplier Inserted");

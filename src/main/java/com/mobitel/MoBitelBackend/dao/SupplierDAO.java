@@ -45,7 +45,7 @@ public class SupplierDAO
 		sessionFactory.getCurrentSession().delete(supplier);
 	}
 	
-	public List<Supplier> getProductDetails()
+	public List<Supplier> getSupplierDetails()
 	{
 		Session session=sessionFactory.openSession();
 		Query query=session.createQuery("from Supplier");

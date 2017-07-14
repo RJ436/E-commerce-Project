@@ -29,16 +29,17 @@ public class Supplier
 	public void setSuppname(String suppname) {
 		this.suppname = suppname;
 	}
-
-	public String getSuppdesc() {
-		return suppdesc;
+	public String getSuppaddr() {
+		return suppaddr;
 	}
 
-	public void setSuppdesc(String suppdesc) {
-		this.suppdesc = suppdesc;
+	public void setSuppaddr(String suppaddr) {
+		this.suppaddr = suppaddr;
 	}
 
-	String suppname,suppdesc;
+
+
+	String suppname,suppaddr;
 
 	
 }
